@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Times</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" integrity="sha256-ujE/ZUB6CMZmyJSgQjXGCF4sRRneOimQplBVLu8OU5w=" crossorigin="anonymous" />
-    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.js" async=false defer=false integrity="sha256-dgFbqbQVzjkZPQxWd8PBtzGiRBhChc4I2wO/q/s+Xeo=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="columns">
@@ -25,11 +25,81 @@
             <!-- Empty Div-->
         </div>
         <div class="column is-four-fifths">
-            
+            <table class="table" id="tableInfo">
+                <thead>
+                    <tr>
+                        <th>Train Name</th>
+                        <th>Destination</th>
+                        <th>First Train Time</th>
+                        <th>Frequency</th>
+                        <th>Time till next train</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <!--Data Here-->
+                </tr>
+            </table>
         </div>
         <div class="column">
             <!-- Empty Div -->
         </div>
     </div>
+
+    <br>
+
+
+    <div class="columns">
+        <div class="column">
+            <!-- Empty div-->
+        </div>
+        <div class="column is-four-fifths" id="test">
+            <h3><b>Add new trains Here</b></h3>
+            <div class="field">
+                <label class="label">Train Name</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Train name Here">
+                </div>
+                <p class="help">Train name above</p>
+            </div>
+
+            <div class="field">
+                <label class="label">Destination</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="E.X. New york">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">First Train Time</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="2130">
+                </div>
+                <p class="help">Insert in Military Time</p>
+            </div>
+
+            <div class="field">
+                <label class="label">Frequency</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="30">
+                </div>
+                <p class="help">Time in minutes</p>
+            </div>
+
+            <div class="field">
+                <p class="control">
+                    <button class="button is-success" onclick="addTrain()">
+                        Submit New Train
+                    </button>
+                </p>
+            </div>
+            <div class="is-hidden-tablet is-hidden-touch" id="hidethis">
+                <h1>Not all fields filled in</h1>
+            </div>
+        </div>
+        <div class="column">
+            <!-- Empty div-->
+        </div>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
