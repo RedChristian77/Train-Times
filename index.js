@@ -49,7 +49,7 @@ window.onload = function() {
         console.log(key);
         let info = localStorage.getItem(key);
         info = JSON.parse(JSON.stringify(info));
-        console.log(this.Object.keys(info));
+        console.log(info);
 
         let readd = document.createElement("tr");
 
